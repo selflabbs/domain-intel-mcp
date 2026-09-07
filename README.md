@@ -36,6 +36,25 @@ claude mcp add --transport http domain-intel https://domain.datakoot.com/mcp
 }
 ```
 
+## Try it in 10 seconds — no key, no signup
+
+Paste this into a terminal:
+
+```bash
+curl -s https://domain.datakoot.com/mcp \
+  -H 'content-type: application/json' \
+  -H 'accept: application/json, text/event-stream' \
+  -d '{"jsonrpc": "2.0", "id": 1, "method": "tools/call", "params": {"name": "tech_stack", "arguments": {"domain": "stripe.com"}}}'
+```
+
+You get the detected technology stack behind stripe.com — no API key, nothing to sign up for.
+
+Or point any MCP client at the URL and just ask your agent, in plain language:
+
+- "What tech stack does stripe.com run on?"
+- "Is this domain's email configured to prevent spoofing?"
+
+
 ## Example agent workflows
 
 - *"Is acme.com a real, established business? When was it registered?"* → `domain_intel`
